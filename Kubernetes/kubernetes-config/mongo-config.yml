@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+data:
+  MONGO_HOST: "mongodb-service" #name of service in mongo-db.yml
+  MONGO_PORT: "27017"

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-appdb
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app:  my-appdb
+  template:
+    metadata:
+      labels:
+        app: my-appdb
+    spec:
+      containers: # multiple container in same pod
+      - name: my-appdb  #for app
+        image: philippaul/node-mongo-db:02
+      - name: mongodb   #for mongo db
+        image: mongo:latest
