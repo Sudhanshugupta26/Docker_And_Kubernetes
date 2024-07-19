@@ -1,0 +1,6 @@
+services:
+  myapp:
+    build: ./
+    ports:
+      - 8080:3000 # this will bind port 8080 with 3000.
+    container_name: 'mywebapp'
